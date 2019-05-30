@@ -4,7 +4,7 @@ import random
 
 import rospy
 import smach
-import smach_ros
+from qt_smach_viewer.introspection import IntrospectionServer
 
 
 class EmptyState(smach.State):
@@ -72,7 +72,7 @@ def SimpleSM1():
 def main():
     Simple_sm = SimpleSM1()
 
-    introspection_server = smach_ros.IntrospectionServer("SM", Simple_sm, "/SM_root")
+    introspection_server = IntrospectionServer(Simple_sm)
     introspection_server.start()
     rospy.sleep(3.0)
     outcome = Simple_sm.execute()

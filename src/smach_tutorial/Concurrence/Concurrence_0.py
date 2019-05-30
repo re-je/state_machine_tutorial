@@ -4,7 +4,7 @@ import random
 
 import rospy
 import smach
-import smach_ros
+from qt_smach_viewer.introspection import IntrospectionServer
 
 
 # Wait state for starting
@@ -68,7 +68,7 @@ def main():
 
     Simple_sm = SimpleSM()
 
-    introspection_server = smach_ros.IntrospectionServer("SM", Simple_sm, "/SM_root")
+    introspection_server = IntrospectionServer(Simple_sm)
     introspection_server.start()
     rospy.sleep(3.0)
     outcome = Simple_sm.execute()

@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 
-import qt_smach_viewer.introspection
 import rospy
 import smach
 

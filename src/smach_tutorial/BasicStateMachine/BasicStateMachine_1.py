@@ -2,7 +2,7 @@
 
 import rospy
 import smach
-import smach_ros
+from qt_smach_viewer.introspection import IntrospectionServer
 
 
 # Exercice 1: define a state machine that go 3 time into the Foo state then leave
@@ -42,7 +42,7 @@ def FooBarStateMachine():
 def main():
 
     SimpleSM = FooBarStateMachine()
-    introspection_server = smach_ros.IntrospectionServer("SM", SimpleSM, "/SM_root")
+    introspection_server = IntrospectionServer(SimpleSM)
     introspection_server.start()
     rospy.sleep(3.0)
     outcome = SimpleSM.execute()

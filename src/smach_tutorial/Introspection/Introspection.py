@@ -1,7 +1,7 @@
 #!/usr/bin/env python2
 
 import rospy
-import smach_ros
+from qt_smach_viewer.introspection import IntrospectionServer
 from smach_tutorial.BasicStateMachine import (
     BasicStateMachine_0,
     BasicStateMachine_1,
@@ -14,7 +14,7 @@ def main():
 
     SimpleSM = BasicStateMachine_0.SetPrintStateMachine()
 
-    introspection_server = smach_ros.IntrospectionServer("SM", SimpleSM, "/SM_root")
+    introspection_server = IntrospectionServer(SimpleSM)
     introspection_server.start()
 
     outcome = SimpleSM.execute()

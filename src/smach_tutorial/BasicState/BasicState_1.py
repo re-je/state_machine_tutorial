@@ -2,7 +2,7 @@
 
 import rospy
 import smach
-import smach_ros
+from qt_smach_viewer.introspection import IntrospectionServer
 
 
 # Exercise 1: Create a Wait State with userdata
@@ -32,7 +32,7 @@ def WaitSM():
 
 def main():
     Wait_sm = WaitSM()
-    introspection_server = smach_ros.IntrospectionServer("SM", Wait_sm, "/SM_root")
+    introspection_server = IntrospectionServer(Wait_sm)
     introspection_server.start()
     rospy.sleep(3.0)
     outcome = Wait_sm.execute()
