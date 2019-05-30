@@ -4,9 +4,8 @@ import rospy
 import smach
 import smach_ros
 
+
 # Exercice 1: define a state machine that go 3 time into the Foo state then leave
-
-
 class Foo(smach.State):
     # each time that this state is executed it increased his inside counter by one
     def __init__(self):
@@ -35,7 +34,7 @@ class Bar(smach.State):
 
 # Fill in this function
 def FooBarStateMachine():
-    FooBar_sm = None  #
+    FooBar_sm = None
 
     return FooBar_sm
 

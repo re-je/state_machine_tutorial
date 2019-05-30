@@ -6,9 +6,8 @@ import rospy
 import smach
 import smach_ros
 
-##Wait state for stating
 
-
+# Wait state for starting
 class EmptyState(smach.State):
     def __init__(self):
         super(EmptyState, self).__init__(
@@ -20,11 +19,7 @@ class EmptyState(smach.State):
         return "continue"
 
 
-##-----------------------------------------------------------------------------------
-##Example 1
-##-----------------------------------------------------------------------------------
-
-
+# Example 1
 class ConcurrenceState(smach.State):
     def __init__(self):
         super(ConcurrenceState, self).__init__(outcomes=["positiv", "negativ"])

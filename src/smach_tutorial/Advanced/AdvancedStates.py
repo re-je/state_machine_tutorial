@@ -5,8 +5,6 @@ import smach
 import smach_ros
 from std_msgs.msg import Bool, Empty, String
 
-# ---------------------------------------------------------------------------------------------------------------
-
 
 class WaitForMessage(smach.State):
     def __init__(self, timeout=10):
@@ -21,7 +19,6 @@ class WaitForMessage(smach.State):
         pass
 
 
-##-----------------------------------------------------------------------------------
 class EmptyState(smach.State):
     def __init__(self):
         super(EmptyState, self).__init__(
@@ -31,9 +28,6 @@ class EmptyState(smach.State):
     def execute(self, ud):
         rospy.sleep(2.0)
         return "continue"
-
-
-# ---------------------------------------------------------------------------------------------------------------
 
 
 class MoveBase_ac(smach.State):

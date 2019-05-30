@@ -19,8 +19,6 @@ class MessageReader(smach.State):
 
 # This state write inside the userdata "msg", the message set as argument when created.
 # For example, if you create this state with Set(msg="Hello World"), the userdate will be set to "Hello World"
-
-
 class Set(smach.State):
     def __init__(self, msg=""):
         # To highlight the use of the remapping, here is an example, note that the input keys and output keys are differents

@@ -4,9 +4,8 @@ import rospy
 import smach
 import smach_ros
 
+
 # Exercise 1: Create a Wait State with userdata
-
-
 class WaitState(smach.State):
     def __init__(self):
         # Setup the smach.State

@@ -9,7 +9,6 @@ from smach_tutorial.BasicStateMachine import (
 )
 
 
-##-----------------------------------------------------------------------------------
 # Example
 def main():
 
@@ -27,8 +26,6 @@ def main1():
     # Create a main function that launch the BasicStateMachine_1.FooBarStateMachine()
     pass
 
-
-##-----------------------------------------------------------------------------------
 
 if __name__ == "__main__":
     rospy.init_node("tutorial_node")

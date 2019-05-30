@@ -4,9 +4,8 @@ import rospy
 import smach
 import smach_ros
 
+
 # Exercise 0
-
-
 class EmptyState(smach.State):
     def __init__(self):
         super(EmptyState, self).__init__(

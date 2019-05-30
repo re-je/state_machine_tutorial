@@ -4,8 +4,7 @@ import qt_smach_viewer.introspection
 import rospy
 import smach
 
-##-----------------------------------------------------------------------------------
-##Exercise 1
+# Exercise 1
 
 
 class WaitState(smach.State):
@@ -19,8 +18,7 @@ class WaitState(smach.State):
         return "continue"
 
 
-##-----------------------------------------------------------------------------------
-##Exercise 2
+# Exercise 2
 
 
 class MessageReader(smach.State):
@@ -36,8 +34,7 @@ class MessageReader(smach.State):
         return "continue"
 
 
-##-----------------------------------------------------------------------------------
-##Exercise 3
+# Exercise 3
 
 
 class MessageReader2(smach.State):

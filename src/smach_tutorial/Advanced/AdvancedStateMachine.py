@@ -8,10 +8,8 @@ import tf
 from geometry_msgs.msg import PoseWithCovarianceStamped
 from move_base_msgs.msg import MoveBaseAction, MoveBaseGoal, MoveBaseResult
 
-##-----------------------------------------------------------------------------------
-##Example 1
 
-
+# Example 1
 class SetGoal(smach.State):
     # this state write inside the userdata "msg", the message set as parameter.
     def __init__(self):
@@ -173,8 +171,6 @@ def MovingSM():
 
     return Moving_sm
 
-
-##-----------------------------------------------------------------------------------
 
 ##this state will set the amcl init pose so we don't get lost at first
 class SetInitialPose(smach.State):
