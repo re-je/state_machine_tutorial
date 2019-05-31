@@ -25,7 +25,7 @@ class SetGoal(smach.State):
                 # set goal
                 goal = MoveBaseGoal()
                 goal.target_pose.header.stamp = rospy.Time.now()
-                goal.target_pose.header.frame_id = "/map"
+                goal.target_pose.header.frame_id = "map"
                 goal.target_pose.pose.position.x = ud.goal_in[0]
                 goal.target_pose.pose.position.y = ud.goal_in[1]
                 goal.target_pose.pose.position.z = 0.0
