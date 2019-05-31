@@ -151,6 +151,8 @@ def MovingSM():
     Moving_sm.userdata.goal = [0.592, -0.553, 0.0]
 
     with Moving_sm:
+        Moving_sm.add("Init", SetInitialPose(), transitions={"position_set": "SetGoal"})
+
         Moving_sm.add(
             "SetGoal",
             SetGoal(),
@@ -311,4 +313,4 @@ def main1():
 
 if __name__ == "__main__":
     rospy.init_node("tutorial_node")
-    main1()
+    main()
